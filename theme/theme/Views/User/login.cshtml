@@ -1,0 +1,20 @@
+﻿@model theme.Models.users
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>login</h2>
+@using (Html.BeginForm("login", "user", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.LabelFor(m => m.name)
+    @Html.TextBoxFor(m => m.name)
+    @Html.ValidationMessageFor(m => m.name)
+    <br />
+    @Html.LabelFor(m => m.password)
+    @Html.TextBoxFor(m => m.password)
+    @Html.ValidationMessageFor(m => m.password)
+
+    <input type="submit" value="login" />
+
+}

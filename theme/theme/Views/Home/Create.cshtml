@@ -1,0 +1,24 @@
+﻿@model theme.Models.user
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Create page</h2>
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+
+    @Html.LabelFor(m => m.name)
+    @Html.TextBoxFor(m => m.name)
+    @Html.ValidationMessageFor(m => m.name)
+    <input type="submit" value="Create" />
+}
+
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-10">
+        <form class="form-wrap mt-4">
+            <div alignment="center" class="btn-group" role="group" aria-label="Basic example">
+            </div>
+            </form>
+        
+        </div>
+    </div>

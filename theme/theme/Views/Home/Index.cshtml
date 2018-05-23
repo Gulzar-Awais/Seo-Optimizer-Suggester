@@ -1,0 +1,29 @@
+﻿@model IEnumerable<theme.Models.user>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="slider-content_wrap">
+
+    <table>
+        @foreach (var s in Model)
+        {
+            @Html.ActionLink("Create", "Create")
+
+            <tr>
+                <td>@s.id</td>
+                <td>@s.name</td>
+
+                <td><a href="~/Home/Edit/@s.id">Edit</a></td>
+                <td><a href="~/Home/Delete/@s.id">Delete</a></td>
+
+
+            </tr>
+        }
+        </table>
+</div>
+
+
+
